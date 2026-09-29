@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "smartkbase" {
 
   tags = {
     project     = "smartkbase"
-    environment = "learning"
+    environment = "development"
     managed_by  = "terraform"
   }
 }

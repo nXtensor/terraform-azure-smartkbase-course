@@ -15,9 +15,9 @@ This repository currently includes the Section 03 lab. Later sections will add m
 
 | Path | Purpose |
 |---|---|
-| `smartkbase/` | Evolving SmartKBase project (resource group) |
-| `checkpoints/section-03-start` | Recovery: write `main.tf` |
-| `checkpoints/section-03-solution` | Recovery: finished S03 |
+| `smartkbase/` | Evolving SmartKBase project. Ships empty of `.tf` files. |
+| `checkpoints/section-03-start` | Pins and provider. You write `main.tf`. |
+| `checkpoints/section-03-solution` | Finished S03 (`development` tag) |
 | `demos/s03-first-rg/` | Copy of the Section 03 video demo (work in `smartkbase/`) |
 | `demos/s03-destroy-demo/` | Disposable destroy demo |
 | `exercises/ex03-first-rg/` | Exercise brief |

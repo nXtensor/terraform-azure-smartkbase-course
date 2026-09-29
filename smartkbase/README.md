@@ -2,6 +2,8 @@
 
 This folder is the start of **SmartKBase**, the same project you will grow for the rest of the course.
 
+It ships **without** Terraform files. That is intentional. You copy the version and provider files in Section 02, and you write `main.tf` in Section 03. Known-good copies live in `checkpoints/`, not here.
+
 Right now SmartKBase is only an Azure resource group. That is intentional. You are learning the Terraform workflow, not a catalogue of Azure services.
 
 After this section you will **leave the resource group in place**. Later sections add storage, a web app, state, a module, environments, and Key Vault to this same project.
@@ -125,6 +127,23 @@ Terraform is configured with `resource_provider_registrations = "none"`, which m
 ---
 
 ## 8. How to deploy (first apply)
+
+This folder should already have `versions.tf` and `providers.tf` from Section 02. If it does not, copy them from `shared/` or from `checkpoints/section-03-start`.
+
+Write `main.tf` in the lecture (or copy the start checkpoint, then write `main.tf`). The first apply uses the `learning` tag:
+
+```hcl
+resource "azurerm_resource_group" "smartkbase" {
+  name     = "rg-smartkbase-learning"
+  location = "eastus"
+
+  tags = {
+    project     = "smartkbase"
+    environment = "learning"
+    managed_by  = "terraform"
+  }
+}
+```
 
 From this `smartkbase/` directory:
 

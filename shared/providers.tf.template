@@ -2,7 +2,7 @@ provider "azurerm" {
   features {}
 
   # AzureRM 5.x does not register resource providers for you.
-  # Register Microsoft.Resources once with Azure CLI (see the README).
+  # Register Microsoft.Resources once with Azure CLI (see smartkbase/README.md).
   resource_provider_registrations = "none"
 
   # Replace this placeholder with your sandbox subscription id:
